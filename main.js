@@ -52,6 +52,9 @@ function renderMovie(movie) {
     imgFav.src = "images/heart.svg"
     imgFav.alt = "Heart Icon"
     movieFav.appendChild(imgFav)
+    imgFav.src = movie.isFavorited ? 'images/heart-fill.svg' : 'images/heart.svg'
+    imgFav.alt = 'Heart'
+    imgFav.classList.add('favoriteImage')
 
     const favSpan = document.createElement('span')
     favSpan.textContent = "Favoritar"
